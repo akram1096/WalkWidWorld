@@ -373,6 +373,10 @@ body {
 /* =======================
    ABOUT SECTION
 ========================== */
+.about-ww {
+  background-color: #f8f9fa; /* Light gray, change to any color you like */
+}
+
 .about-ww h3 {
   font-size: 1.8rem;
   font-weight: 600;
