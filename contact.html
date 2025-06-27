@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WalkWidWorld</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- MOBILE ONLY: Top Centered Logo -->
+  <div class="mobile-top-logo text-center py-3 d-block d-lg-none">
+    <a href="index.html">
+      <img src="images/logo 3.png" alt="WalkWidWorld Logo" style="max-height: 80px;">
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <!-- Nav Toggler (Mobile) -->
+      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- LEFT: Nav Links (Desktop only) -->
+      <ul class="navbar-nav d-none d-lg-flex flex-row gap-3 me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="WalkWidWorld.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+
+<!-- FLEX-CENTERED LOGO -->
+<div class="d-none d-lg-flex align-items-center justify-content-center flex-grow-1">
+  <a class="navbar-brand m-0" href="index.html">
+    <img src="images/logo 3.png" alt="WalkWidWorld Logo" class="navbar-center-logo">
+  </a>
+</div>
+
+
+      <!-- RIGHT: Icons and Search -->
+      <div class="d-flex align-items-center gap-2 right-icons">
+        <a href="wishlist.html" class="text-white icon-btn" title="Wishlist">
+          <i class="bi bi-heart"></i>
+        </a>
+        <a href="login.html" class="text-white icon-btn" title="Login">
+          <i class="bi bi-person"></i>
+        </a>
+
+        <!-- Desktop Search -->
+        <form class="d-none d-lg-flex align-items-center" role="search">
+          <div class="input-group search-bar">
+            <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-light" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Mobile Search Icon -->
+        <a href="#" class="d-lg-none text-white toggle-mobile-search icon-btn" title="Search">
+          <i class="bi bi-search"></i>
+        </a>
+      </div>
+
+      <!-- Collapsible Nav (Mobile) -->
+      <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarContent">
+        <ul class="navbar-nav flex-column d-lg-none w-100">
+          <li class="nav-item"><a class="nav-link" href="WalkWidWorld.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Search Bar -->
+  <div class="mobile-search-input text-center">
+    <input type="text" placeholder="Search..." />
+  </div>
+
+  <!-- JS -->
+  <script src="javas.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+/* =======================
+   BASE STYLES
+========================== */
+body {
+  background-color: #fff;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  overflow-x: hidden;
+}
+
+/* =======================
+   MOBILE TOP LOGO
+========================== */
+.mobile-top-logo {
+  background-color: #fff;
+}
+
+/* =======================
+   NAVBAR CENTERED LOGO
+========================== */
+.navbar-center-logo,
+.navbar .navbar-brand {
+  max-height: 60px;
+  vertical-align: middle;
+  position: relative;
+  z-index: 10;
+}
+
+/* =======================
+   NAV LINKS (COMMON)
+========================== */
+.navbar-nav .nav-link {
+  color: #fff !important;
+  margin-right: 1.2rem;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  transform: scale(1.05);
+  background-color: transparent !important;
+}
+
+/* =======================
+   NAV LINKS HOVER EFFECT (DESKTOP)
+========================== */
+@media (min-width: 992px) {
+  .navbar .nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .navbar .nav-link:hover::after {
+    width: 60%;
+  }
+}
+
+/* =======================
+   RIGHT ICONS (DESKTOP)
+========================== */
+.right-icons {
+  gap: 1rem;
+  align-items: center;
+  display: flex;
+  padding-left: 80px;
+}
+
+.right-icons a,
+.right-icons form {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 250px;
+}
+
+.search-bar input {
+  border-radius: 0.375rem 0 0 0.375rem;
+  background-color: #fff;
+  color: #000;
+  padding: 0.45rem 0.75rem;
+}
+
+.search-bar input::placeholder {
+  color: #888;
+}
+
+.search-bar .btn {
+  border-radius: 0 0.375rem 0.375rem 0;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+}
+
+.search-bar .btn:hover {
+  background-color: #333;
+}
+
+/* =======================
+   ICON BUTTON
+========================== */
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+/* Mobile hover effect (black background) */
+@media (max-width: 991px) {
+  .icon-btn:hover {
+    background-color: #1a1a1a;
+    transform: scale(1.1);
+  }
+}
+
+/* Desktop hover effect (underline) */
+@media (min-width: 992px) {
+  .icon-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .icon-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .icon-btn:hover::after {
+    width: 70%;
+  }
+}
+
+/* =======================
+   MOBILE SEARCH
+========================== */
+.mobile-search-input {
+  display: none;
+  padding: 0.6rem 1rem;
+  background-color: #1a1a1a;
+  position: relative;
+  z-index: 1000;
+}
+
+.mobile-search-input.active {
+  display: block;
+}
+
+.mobile-search-input input {
+  width: 90%;
+  background-color: #222;
+  border: none;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* =======================
+   MOBILE NAV STICKY
+========================== */
+@media (max-width: 991px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .mobile-search-input {
+    position: relative;
+    z-index: 999;
+    background-color: #1a1a1a;
+    display: none;
+    width: 100%;
+  }
+
+  .mobile-search-input.active {
+    display: block;
+  }
+}
+
+
+/* =======================
+   BANNER SLIDER
+========================== */
+#mainCarousel {
+  position: relative;
+  margin-top: 0;
+}
+
+.banner-img {
+  height: 400px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .banner-img {
+    height: 200px;
+  }
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+/* =======================
+   SECTION TITLE
+========================== */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  margin: 8px auto 0;
+  width: 80px;
+  height: 3px;
+  background: #000;
+}
+
+/* =======================
+   SHOP BY AGE
+========================== */
+.shop-by-age {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.age-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.age-tile {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.age-tile:hover {
+  transform: translateY(-5px);
+}
+
+.age-top {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+
+.age-bottom {
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+
+.age-bottom h3 {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.view-btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .age-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =======================
+   SHOP BY FABRIC
+========================== */
+/* === SHOP BY FABRIC GRID (NEW STRUCTURE) === */
+.fabric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.fabric-tile {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.fabric-tile:hover {
+  transform: translateY(-5px);
+}
+
+.fabric-image {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+
+.fabric-info {
+  padding: 1rem;
+}
+
+.fabric-info a {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.fabric-info a:hover {
+  background-color: #333;
+}
+
+
+/* =======================
+   ABOUT SECTION
+========================== */
+.about-ww h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about-ww p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* =======================
+   FOOTER
+========================== */
+.site-footer h5,
+.site-footer h6 {
+  font-weight: 600;
+}
+
+.site-footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer i {
+  font-size: 1.2rem;
+}
