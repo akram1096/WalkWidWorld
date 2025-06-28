@@ -365,6 +365,12 @@ body {
   display: inline-block;
 }
 
+/* Make fabric names black */
+.fabric-info h4 {
+    color: black;
+    font-weight: bold;
+}
+
 .fabric-info a:hover {
   background-color: #333;
 }
