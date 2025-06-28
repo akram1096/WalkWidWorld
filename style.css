@@ -369,26 +369,6 @@ body {
   background-color: #333;
 }
 
-
-/* =======================
-   ABOUT SECTION
-========================== */
-.about-ww {
-  background-color: #6d6d6d; /* Light gray, change to any color you like */
-}
-
-.about-ww h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #fff
-}
-
-.about-ww p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #fff;
-}
   /* =======================
    FOOTER
 ========================== */
