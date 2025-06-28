@@ -388,3 +388,29 @@ body {
 .site-footer i {
   font-size: 1.2rem;
 }
+
+/* Footer Quick Links Underline Animation */
+.site-footer .list-unstyled li a {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.site-footer .list-unstyled li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.site-footer .list-unstyled li a:hover::after {
+    width: 100%;
+}
+
+.site-footer .list-unstyled li a:hover {
+    color: #f8f9fa !important; /* Slightly brighter white on hover */
+}
