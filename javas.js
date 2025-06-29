@@ -29,20 +29,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Contact form validation and success message
-document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("contactForm");
-  const successMsg = document.getElementById("contactSuccess");
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
+  // Basic validation
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const topic = document.getElementById('topic').value;
 
-      if (contactForm.checkValidity()) {
-        successMsg.classList.remove("d-none");
-        contactForm.reset();
-      } else {
-        contactForm.reportValidity();
-      }
-    });
+  if (!name || !email || !subject || !message || !topic) {
+    alert("Please fill in all required fields.");
+    return;
   }
+
+  // Email format check (simple)
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  // Simulate success
+  document.getElementById('formResponse').style.display = 'block';
+  this.reset();
 });
+
