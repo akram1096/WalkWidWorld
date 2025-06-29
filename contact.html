@@ -91,61 +91,76 @@
     <input type="text" placeholder="Search..." />
   </div>
 
-    <!-- Brand Message -->
-    <div class="col-lg-6 d-flex align-items-center">
-      <div class="brand-block">
-        <h4>We're always here to help!</h4>
-        <p>
-          Whether you're a parent, gift-giver, or just love cute clothes – drop us a message.
-          Our team usually replies within 3–5 working days.
-        </p>
-      </div>
-    </div>
+<section class="contact-section py-5">
+  <!-- Top Info Block -->
+  <div class="contact-info-block text-center px-3 py-4">
+    <h2 class="mb-2 fw-bold">We're always here to help!</h2>
+    <p>
+      Whether you're a parent, gift-giver, or just love cute clothes – drop us a message.
+      Our team usually replies within 3–5 working days.
+    </p>
+  </div>
 
-  
-  <!-- Contact Section -->
-<section class="contact-section container my-5">
-  <div class="row">
-    <!-- Form -->
-    <div class="col-lg-6 mb-4">
-      <h2 class="section-title">Get in Touch</h2>
-      <form id="contactForm" novalidate>
-        <div class="mb-3">
-          <label class="form-label">Name*</label>
-          <input type="text" class="form-control" name="name" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Email*</label>
-          <input type="email" class="form-control" name="email" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Subject*</label>
-          <input type="text" class="form-control" name="subject" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Topic*</label>
-          <select class="form-control" name="topic" required>
-            <option value="">Select a topic</option>
-            <option value="fabric">Fabric Inquiry</option>
-            <option value="collab">Collaboration</option>
-            <option value="delivery">Delivery</option>
-            <option value="general">General</option>
-            <option value="feedback">Feedback</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Message*</label>
-          <textarea class="form-control" name="message" rows="5" required></textarea>
-        </div>
-        <p class="text-muted small mb-3">We reply within 3–5 working days.</p>
-        <button type="submit" class="btn btn-dark">Submit</button>
-        <div id="contactSuccess" class="text-success mt-3 d-none">
-          ✅ Thank you! We'll get back to you within 3–5 working days.
-        </div>
-      </form>
+  <!-- Contact Form -->
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <h3 class="text-center mb-4 section-title">Get in Touch</h3>
+
+        <form id="contactForm" novalidate>
+          <!-- Name -->
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required />
+            <label for="name">Name*</label>
+          </div>
+
+          <!-- Email -->
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+            <label for="email">Email*</label>
+          </div>
+
+          <!-- Subject -->
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="subject" placeholder="Subject" required />
+            <label for="subject">Subject*</label>
+          </div>
+
+          <!-- Topic Dropdown -->
+          <div class="form-floating mb-3">
+            <select class="form-select" id="topic" required>
+              <option value="" disabled selected>Please choose</option>
+              <option value="fabric">Fabric Inquiry</option>
+              <option value="collab">Collaboration</option>
+              <option value="delivery">Delivery</option>
+              <option value="general">General</option>
+              <option value="feedback">Feedback</option>
+            </select>
+            <label for="topic">What do you need?</label>
+          </div>
+
+          <!-- Message -->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Your Message" id="message" style="height: 150px;" required></textarea>
+            <label for="message">Message*</label>
+          </div>
+
+          <!-- Response Time Note -->
+          <p class="small text-muted mb-3">We reply within 3–5 working days.</p>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-dark w-100">Submit</button>
+
+          <!-- Confirmation Message -->
+          <div id="formResponse" class="mt-3 text-success fw-bold" style="display: none;">
+            Thank you! We'll get back to you within 3–5 working days.
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
+
 
 
 <!-- FOOTER SECTION START -->
