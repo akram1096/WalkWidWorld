@@ -385,8 +385,6 @@ body {
 /* CONTACT US PAGE STYLES        */
 /* ------------------------------ */
 
-/* Banner Image with Overlay Text */
-
 /* Contact Section */
 .contact-section {
   padding-top: 2rem;
@@ -424,6 +422,28 @@ body {
 }
 
 
+/* Full-width message block above contact form */
+.full-width-message {
+  background-color: #f8f8f8;
+  padding: 2rem 1rem;
+  margin: 0 auto 2rem;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  max-width: 900px;
+}
+
+.full-width-message h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.full-width-message p {
+  color: #444;
+  line-height: 1.6;
+}
 
 
   /* =======================
