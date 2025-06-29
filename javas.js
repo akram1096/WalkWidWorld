@@ -28,19 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// ==============================
-// CONTACT FORM VALIDATION LOGIC
-// ==============================
-
+// Contact form validation and success message
 document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contactForm");
+  const successMsg = document.getElementById("contactSuccess");
 
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
       if (contactForm.checkValidity()) {
-        alert("✅ Thank you! Your message has been submitted.");
+        successMsg.classList.remove("d-none");
         contactForm.reset();
       } else {
         contactForm.reportValidity();
