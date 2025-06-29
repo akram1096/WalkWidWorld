@@ -414,6 +414,35 @@ body {
   border-radius: 2px;
 }
 
+/* Full-width wrapper with light background */
+.support-message-wrapper {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 2rem 0;
+  margin: 0; /* removes top margin */
+}
+
+/* Centered content with max width */
+.support-message {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.support-message h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.support-message p {
+  font-size: 1rem;
+  color: #333;
+}
+
+
 
   /* =======================
    FOOTER
