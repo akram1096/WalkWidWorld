@@ -27,3 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// ==============================
+// CONTACT FORM VALIDATION LOGIC
+// ==============================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (contactForm.checkValidity()) {
+        alert("✅ Thank you! Your message has been submitted.");
+        contactForm.reset();
+      } else {
+        contactForm.reportValidity();
+      }
+    });
+  }
+});
