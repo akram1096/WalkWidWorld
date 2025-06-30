@@ -493,3 +493,7 @@ body {
 .site-footer .list-unstyled li a:hover {
     color: #f8f9fa !important; /* Slightly brighter white on hover */
 }
+
+.navbar-nav .nav-link.active {
+    font-weight: bold !important;
+}
